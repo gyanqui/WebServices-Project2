@@ -42,13 +42,13 @@ DELETE http://localhost:3000/products/ HTTP/1.1
 
 // PRODUCTION TEST
 ### Get all contacts
-GET https://webservices-project1.onrender.com/users
+GET https://webservices-project1.onrender.com/products
 
 ### Get contact by ID
-GET https://webservices-project1.onrender.com/users/
+GET https://webservices-project1.onrender.com/products/
 
 ### Create new User
-POST https://webservices-project1.onrender.com/users HTTP/1.1
+POST https://webservices-project1.onrender.com/products HTTP/1.1
 Content-Type: application/json
 
 {
@@ -63,7 +63,7 @@ Content-Type: application/json
 }
 
 ### Update User
-PUT https://webservices-project1.onrender.com/users/ HTTP/1.1
+PUT https://webservices-project1.onrender.com/products/ HTTP/1.1
 Content-Type: application/json
 
 {
@@ -78,4 +78,4 @@ Content-Type: application/json
 }
 
 ### Delete User
-DELETE https://webservices-project1.onrender.com/users/ HTTP/1.1
+DELETE https://webservices-project1.onrender.com/products/ HTTP/1.1
