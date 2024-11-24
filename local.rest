@@ -1,0 +1,81 @@
+// DEVELOPMENT TEST
+### Get all contacts
+GET http://localhost:3000/products
+
+### Get contact by ID
+GET http://localhost:3000/products/
+
+### Create new User
+POST http://localhost:3000/products HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Smart Watch Series 8",
+    "category": "Wearables",
+    "price": 299.99,
+    "stockQuantity": 75,
+    "brand": "Apple",
+    "rating": 4,
+    "dateAdded": "2024-11-10",
+    "isAvailable": true
+}
+
+### Update User
+PUT http://localhost:3000/products/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Smart Watch Series 8",
+    "category": "Wearables",
+    "price": 99.99,
+    "stockQuantity": 5,
+    "brand": "Apple",
+    "rating": 5,
+    "dateAdded": "2024-11-10",
+    "isAvailable": true
+}
+
+### Delete User
+DELETE http://localhost:3000/products/ HTTP/1.1
+
+
+
+// PRODUCTION TEST
+### Get all contacts
+GET https://webservices-project1.onrender.com/users
+
+### Get contact by ID
+GET https://webservices-project1.onrender.com/users/
+
+### Create new User
+POST https://webservices-project1.onrender.com/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Smart Watch Series 8",
+    "category": "Wearables",
+    "price": 299.99,
+    "stockQuantity": 75,
+    "brand": "Apple",
+    "rating": 4,
+    "dateAdded": "2024-11-10",
+    "isAvailable": true
+}
+
+### Update User
+PUT https://webservices-project1.onrender.com/users/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Smart Watch Series 8",
+    "category": "Wearables",
+    "price": 99.99,
+    "stockQuantity": 5,
+    "brand": "Apple",
+    "rating": 5,
+    "dateAdded": "2024-11-10",
+    "isAvailable": true
+}
+
+### Delete User
+DELETE https://webservices-project1.onrender.com/users/ HTTP/1.1
