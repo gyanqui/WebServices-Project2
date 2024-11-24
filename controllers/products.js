@@ -18,7 +18,6 @@ const getSingle = async (req, res) => {
     if (!ObjectId.isValid(req.params.id)) {
         return res.status(400).json('Must use a valid product ID to find a product.');
     }
-
     //#swagger.tags=['Products']
     const productId = new ObjectId(req.params.id);
     const result = await mongodb
@@ -60,7 +59,6 @@ const updateProduct = async (req, res) => {
     if (!ObjectId.isValid(req.params.id)) {
         return res.status(400).json('Must use a valid product ID to update a product.');
     }
-
     //#swagger.tags=['Products']
     const productId = new ObjectId(req.params.id);
     const product = {
