@@ -3,10 +3,7 @@ const passport = require('passport');
 const router = require('express').Router();
 
 router.use('/', require('./swagger'));
-router.get('/', (req, res) => { 
-    res.send((req.session.user !== undefined ? `Logged in as ${req.session.user.displayName}` : `Logged out`));
-});
-
+router.get('/', (req, res) => { res.send('Welcome to my API Application');});
 router.use('/products', require('./products'));
 router.use('/sellers', require('./sellers'));
 
