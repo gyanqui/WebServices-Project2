@@ -56,6 +56,7 @@ app.get('/github/callback', passport.authenticate('github', {
     (req, res) => {
         console.log(req.user);  // Print the user information
         req.session.user = req.user;
+        res.cookie.user = req.user;
         res.redirect('/');
     });
 
