@@ -16,7 +16,7 @@ app
         secret: "secret",
         resave: false,
         saveUninitialized: true,
-        cookie: { secure: true }
+        //cookie: { secure: true }
     }))
     .use(passport.initialize())
 
@@ -54,9 +54,7 @@ passport.deserializeUser((user, done) => {
 app.get('/github/callback', passport.authenticate('github', {
     failureRedirect: '/api-docs', session:false}),
     (req, res) => {
-        console.log(req.user);  // Print the user information
         req.session.user = req.user;
-        res.cookie.user = req.user;
         res.redirect('/');
     });
 
