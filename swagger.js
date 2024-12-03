@@ -6,23 +6,7 @@ const doc = {
     description: 'Users API'
     },
     host: 'localhost:3000',
-    schema: ['https'],
-
-
-    securityDefinitions: {
-        OAuth2: {
-            type: 'oauth2',
-            authorizationUrl: 'https://github.com/login/oauth/authorize',
-            flow: 'implicit',
-            scopes: {
-                'user:email': 'Access to user email'
-            }
-        }
-    },
-    security: [{
-        OAuth2: ['user:email']
-    }]
-
+    schema: ['https']
 };
 
 const outputFile = './swagger.json';
