@@ -33,8 +33,6 @@ app
     .use(cors({ origin: '*' }))
     .use("/", require("./routes/index.js"));
 
-
-
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
@@ -56,6 +54,7 @@ passport.deserializeUser((user, done) => {
 app.get('/github/callback', passport.authenticate('github', {
     failureRedirect: '/api-docs', session:false}),
     (req, res) => {
+        console.log(req.user);  // Print the user information
         req.session.user = req.user;
         res.redirect('/');
     });
